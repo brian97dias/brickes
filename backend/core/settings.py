@@ -40,9 +40,20 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
+    # terceros
+    "rest_framework", #entender APIs
+    "corsheaders", # entender CORS
+
+    # locales
+    'accounts.apps.AccountsConfig',
+    'inventory.apps.InventoryConfig',
+    'tickets.apps.TicketsConfig',
+    'customer_portal.apps.CustomerPortalConfig'
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware', # entender CORS al inicio
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
